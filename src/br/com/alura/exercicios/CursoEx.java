@@ -6,15 +6,14 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
-import br.com.alura.Aluno;
-import br.com.alura.Aula;
+
 
 public class CursoEx {
 	
 	private String nome;
     private String instrutor;
     private List<AulaEx> aulas = new LinkedList<AulaEx>();
-    private Set<Aluno> alunosEx = new HashSet<>();
+    private Set<AlunoEx> alunosEx = new HashSet<>();
     
     public CursoEx(String nome, String instrutor) {
         this.nome = nome;
@@ -54,7 +53,7 @@ public class CursoEx {
     	return "[Curso: " + nome + ", tempo total: " + this.getTempoTotal() + ", aulas:  " + this.aulas + "]";
     }
     
-    public void matricula(Aluno aluno) {
+    public void matricula(AlunoEx aluno) {
     	this.alunosEx.add(aluno);
 	}
     
