@@ -24,10 +24,23 @@ Curso javaColecoes = new Curso("Dominando as Coleções do Java", "Paulo Silveira"
 		javaColecoes.getAlunos().forEach(a ->{System.out.println(a);});
 		
 		
+		//Aula 7 - quando é necessário comparar dois elementos, é necessário criar os metodos hashcode e equals.
+		System.out.println("O aluno " + a1 + "está matriculado?");
+		System.out.println(javaColecoes.estaMatriculado(a1));
 		
 		
-
 		
+		
+		Aluno turini = new Aluno("Rodrigo Turini", 38456);
+		String nome = "Rodrigo Turini";
+		System.out.println("E este Turini, está matriculado?");
+		System.out.println(javaColecoes.estaMatriculado(turini));
+		
+		System.out.println("a1 é equals ao Turini?");
+		System.out.println(a1.equals(turini));
+		
+		//obrigatoriamente o seguinte é true
+		System.out.println(a1.hashCode() == turini.hashCode());
 		
 		
 	}
