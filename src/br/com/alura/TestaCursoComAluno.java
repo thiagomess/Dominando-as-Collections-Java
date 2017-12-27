@@ -1,5 +1,8 @@
 package br.com.alura;
 
+import java.util.Iterator;
+import java.util.Set;
+
 public class TestaCursoComAluno {
 	
 	public static void main(String[] args) {
@@ -21,11 +24,30 @@ Curso javaColecoes = new Curso("Dominando as Coleções do Java", "Paulo Silveira"
 		javaColecoes.matricula(a3);
 		
 		System.out.println("Todos os alunos matriculados: " );
-		javaColecoes.getAlunos().forEach(a ->{System.out.println(a);});
+		
+		//modo antigo para pegar os dados (antes do java 5)
+		Set<Aluno> alunos = javaColecoes.getAlunos();
+		Iterator<Aluno> iterador =alunos.iterator();
+		while (iterador.hasNext()) {
+			Aluno proximo = iterador.next();
+			System.out.println(proximo);
+			
+		}
+		
+		
+      /* For do java 5	
+       * for (Aluno a: javaColecoes.getAlunos()) {
+			System.out.println(a);
+		}*/
+		
+			
+		
+		/*For java 8
+		 * javaColecoes.getAlunos().forEach(a ->{System.out.println(a);});*/
 		
 		
 		//Aula 7 - quando é necessário comparar dois elementos, é necessário criar os metodos hashcode e equals.
-		System.out.println("O aluno " + a1 + "está matriculado?");
+		System.out.println("O aluno " + a1 + " está matriculado?");
 		System.out.println(javaColecoes.estaMatriculado(a1));
 		
 		

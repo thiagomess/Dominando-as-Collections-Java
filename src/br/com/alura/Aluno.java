@@ -23,7 +23,7 @@ public class Aluno {
 
 	@Override
 	public String toString() {
-		return "[Aluno: " + this.nome + ", matricula: " + this.numeroMatricula + " ]";
+		return "[Aluno: " + this.nome + ", matricula: " + this.numeroMatricula + "]";
 	}
 	
 	@Override
